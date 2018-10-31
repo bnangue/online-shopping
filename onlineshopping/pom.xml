@@ -14,6 +14,12 @@
   </properties>
   
   <dependencies>
+  	<!-- Link Backend Project -->
+  	<dependency>
+  		<groupId>com.bricenangue</groupId>
+	  	<artifactId>shoppingbackend</artifactId>
+	  	<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   
   	<!-- JAVA EE API -->
 	<dependency>
@@ -37,6 +43,7 @@
 	    <artifactId>spring-webmvc</artifactId>
 	    <version>${spring.version}</version>
 	</dependency>
+	
     <!-- JSTL JavaServerPage Tag Library-->
 	<dependency>
 	    <groupId>jstl</groupId>

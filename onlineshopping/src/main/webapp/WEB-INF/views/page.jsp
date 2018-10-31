@@ -20,10 +20,10 @@
 
     <title>Online Shopping - ${title}</title>
     
-    <script>
-    	window.menu = '${title}';
-    </script>
-
+    <script type="text/javascript">
+		window.menu = '${title}';
+	</script>    
+	
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.css" rel="stylesheet">
 
@@ -59,6 +59,13 @@
 			
 		    <%@include file="contact.jsp" %>
 		    </c:if>
+		    
+		    <!-- Load List of Products Page -->
+		    <c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+			
+		    <%@include file="listProducts.jsp" %>
+		    </c:if>
+		    
 		</div>
 		
 	
@@ -67,12 +74,39 @@
 	  
 	
 	    <!-- JavaScript -->
-	    <script src="${js}/jquery-1.10.2.js"></script>
+	    <script src="${js}/jquery.js"></script>
 	    
 	    <script src="${js}/bootstrap.js"></script>
 	    
 	    <!-- Application JavaScript -->
-	    <script src="${js}/myapp.js"></script>
+	    
+      	<script type="text/javascript">
+      	
+      	$(function() {
+      		//determine actived menu
+      		switch (menu) {
+      		case "About Us":
+      			$("#about").addClass("active");
+      			break;
+      		case "Contact Us":
+      			$("#contact").addClass("active");
+      			break;
+
+      		case "All Products":
+      			$("#listProducts").addClass("active");
+      			break;
+      		default:
+      			$("#listProducts").addClass("active");
+      			$("#a_"+menu).addClass("active");
+
+      			break;
+      		}
+      		
+      	});
+      	</script>
+      	
+      	<!--  <script src="${js}/myapp.js"></script> -->
+    
 	</div>
 	
 

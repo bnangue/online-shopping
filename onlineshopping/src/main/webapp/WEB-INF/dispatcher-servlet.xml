@@ -11,6 +11,8 @@ xmlns:mvc = "http://www.springframework.org/schema/mvc"
    
    
    <context:component-scan base-package="com.bricenangue.onlineshopping.controller"/>
+   <context:component-scan base-package="com.bricenangue.shoppingbackend.daoimpl"/>
+   
    
    
    <bean id = "viewResolver"
