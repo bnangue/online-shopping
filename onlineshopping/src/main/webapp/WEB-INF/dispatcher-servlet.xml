@@ -10,8 +10,8 @@ xmlns:mvc = "http://www.springframework.org/schema/mvc"
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    
    
-   <context:component-scan base-package="com.bricenangue.onlineshopping.controller"/>
-   <context:component-scan base-package="com.bricenangue.shoppingbackend.daoimpl"/>
+   <context:component-scan base-package="com.bricenangue.onlineshopping"/>
+   <context:component-scan base-package="com.bricenangue.shoppingbackend"/>
    
    
    
